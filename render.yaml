@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: angelinas-guestbook
+    runtime: docker
+    plan: free
+    autoDeploy: true
