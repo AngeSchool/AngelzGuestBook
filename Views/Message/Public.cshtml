@@ -1,0 +1,36 @@
+@model IEnumerable<GuestbookApp.Models.Message>
+
+@{
+    ViewData["Title"] = "Gästbok 📖";
+}
+
+<h2 class="text-center">📖 Gästbok</h2>
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Meddelande</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Content</td> <!-- Emojis visas här -->
+                        <td>@item.PostedAt.ToString("g")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <p>Inga meddelanden ännu. ✍️</p>
+}

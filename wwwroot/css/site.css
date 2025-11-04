@@ -1,0 +1,47 @@
+﻿html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Page background and global text color */
+body {
+  margin-bottom: 60px;
+  color: white; /* global text color (change to #333 for dark text) */
+  font-family: 'Segoe UI', sans-serif;
+
+  /* Background JPEG - update the path to your actual image file */
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #000000; /* fallback while image loads */
+}
+
+/* Focus outline */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Content container: semi‑transparent so background shows through
+   and white page text remains readable. If you prefer a white card,
+   change rgba to rgba(255,255,255,0.9) and set body color to #333. */
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  color: inherit;
+}
+
+/* Ensure table cells and headers use white text on the dark background */
+.table td, .table th {
+  color: white !important;
+}
