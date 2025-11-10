@@ -8,7 +8,7 @@ WORKDIR /src/GuestBookApp
 RUN dotnet restore "GuestBookApp.csproj"
 
 # Copy rest and publish
-COPY . .
+COPY GuestBookApp/. ./
 RUN dotnet publish "GuestBookApp.csproj" -c Release -o /app/publish
 
 # Runtime stage
