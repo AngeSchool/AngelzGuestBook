@@ -1,9 +1,10 @@
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src/GuestBookApp
+WORKDIR /src
 
 # Copy csproj and restore
-COPY GuestBookApp/GuestBookApp.csproj ./
+COPY GuestBookApp/GuestBookApp.csproj GuestBookApp/
+WORKDIR /src/GuestBookApp
 RUN dotnet restore "GuestBookApp.csproj"
 
 # Copy rest and publish
@@ -17,5 +18,4 @@ COPY --from=build /app/publish .
 ENV ASPNETCORE_URLS=http://+:80
 EXPOSE 80
 
-# Start the app
 ENTRYPOINT ["dotnet", "GuestBookApp.dll"]
