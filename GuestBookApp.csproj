@@ -19,5 +19,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
+	<ItemGroup>
+		<Content Include="Views\**\*.cshtml" CopyToPublishDirectory="PreserveNewest" />
+		<Content Include="Guestbook.db" CopyToPublishDirectory="PreserveNewest" />
+	</ItemGroup>
 
 </Project>
