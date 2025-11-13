@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<GuestbookContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("GuestbookConnection")));
+    options.UseSqlite("Data Source=Guestbook.db"));
 
 var app = builder.Build();
 
