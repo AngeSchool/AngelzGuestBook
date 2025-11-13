@@ -15,7 +15,7 @@ namespace GuestBookApp.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Message"] = "Välkommen till min gästbok kära NätverksTekniker! Skriv ett meddelande och ha kul!";
+            ViewData["Message"] = "Hej allihopa! Skriv ett meddelande och ha kul!";
             return View();
 
         }
