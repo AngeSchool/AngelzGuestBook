@@ -14,7 +14,7 @@
 body {
   margin-bottom: 60px;
   color: white; /* global text color (change to #333 for dark text) */
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'MontSerrat', sans-serif;
 
   /* Background JPEG - update the path to your actual image file */
   background-image: url('/images/background.jpg');
